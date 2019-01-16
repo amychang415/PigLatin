@@ -26,7 +26,7 @@ public int findFirstVowel(String sWord)
 {
 	for (int i = 0; i<sWord.length(); i++)
   {
-    if (sWord.charAt(i) == 'a' || sWord.charAt(i) == 'e' || sWord.charAt(i) == 'i' || sWord.charAt(i) == 'o' || sWord.charAt(i) == 'u')
+    if (sWord.charAt(i) == 'a' || sWord.charAt(i) == 'e' || sWord.charAt(i) == 'i' || sWord.charAt(i) == 'o' || sWord.charAt(i) == 'u' || sWord.charAt(i) == 'A' || sWord.charAt(i) == 'E' || sWord.charAt(i) == 'I' || sWord.charAt(i) == 'O' || sWord.charAt(i) == 'U')
     {
       return i;
     }
@@ -69,7 +69,7 @@ public void separate(String line)
 int x = 0;
 	for (int i = 0; i < line.length()-1; i++)
 	{
-		if (line.substring(i,i+1).equals(" "))
+		if (line.substring(i,i+1).equals(" ") || line.substring(i,i+1).equals(",") || line.substring(i,i+1).equals("."))
 		{
 			words.add(line.substring(x,i));
 			x = i+1;
